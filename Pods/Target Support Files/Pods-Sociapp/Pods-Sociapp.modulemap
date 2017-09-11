@@ -1,0 +1,6 @@
+framework module Pods_Sociapp {
+  umbrella header "Pods-Sociapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
