@@ -14,6 +14,11 @@
 		DA5F88EC1F66E71800F83E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5F88EB1F66E71800F83E0C /* Assets.xcassets */; };
 		DA5F88EF1F66E71800F83E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F88ED1F66E71800F83E0C /* LaunchScreen.storyboard */; };
 		DA5F88F71F66E7D400F83E0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5F88F61F66E7D400F83E0C /* GoogleService-Info.plist */; };
+		DA5F88FC1F6844F200F83E0C /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F88FB1F6844F200F83E0C /* FancyView.swift */; };
+		DA5F88FE1F6845FF00F83E0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F88FD1F6845FF00F83E0C /* Constants.swift */; };
+		DA5F89041F68498A00F83E0C /* RoundedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89031F68498A00F83E0C /* RoundedBTN.swift */; };
+		DA5F89061F69645900F83E0C /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89051F69645900F83E0C /* FancyField.swift */; };
+		DA5F89081F69664600F83E0C /* fancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89071F69664600F83E0C /* fancyBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		DA5F88EE1F66E71800F83E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA5F88F01F66E71800F83E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5F88F61F66E7D400F83E0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA5F88FB1F6844F200F83E0C /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		DA5F88FD1F6845FF00F83E0C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA5F89031F68498A00F83E0C /* RoundedBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBTN.swift; sourceTree = "<group>"; };
+		DA5F89051F69645900F83E0C /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		DA5F89071F69664600F83E0C /* fancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyBtn.swift; sourceTree = "<group>"; };
 		DDA1378048142C625BB43D42 /* Pods-Sociapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sociapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sociapp/Pods-Sociapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +94,8 @@
 				DA5F88F91F66E9A100F83E0C /* Views */,
 				DA5F88F81F66E99400F83E0C /* Model */,
 				DA5F88E41F66E71800F83E0C /* AppDelegate.swift */,
+				DA5F88E81F66E71800F83E0C /* Main.storyboard */,
+				DA5F88ED1F66E71800F83E0C /* LaunchScreen.storyboard */,
 				DA5F88EB1F66E71800F83E0C /* Assets.xcassets */,
 				DA5F88F61F66E7D400F83E0C /* GoogleService-Info.plist */,
 				DA5F88F01F66E71800F83E0C /* Info.plist */,
@@ -101,8 +113,11 @@
 		DA5F88F91F66E9A100F83E0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA5F88E81F66E71800F83E0C /* Main.storyboard */,
-				DA5F88ED1F66E71800F83E0C /* LaunchScreen.storyboard */,
+				DA5F88FB1F6844F200F83E0C /* FancyView.swift */,
+				DA5F88FD1F6845FF00F83E0C /* Constants.swift */,
+				DA5F89031F68498A00F83E0C /* RoundedBTN.swift */,
+				DA5F89051F69645900F83E0C /* FancyField.swift */,
+				DA5F89071F69664600F83E0C /* fancyBtn.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -194,6 +209,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sociapp/Pods-Sociapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -201,6 +219,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -251,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5F89081F69664600F83E0C /* fancyBtn.swift in Sources */,
+				DA5F89061F69645900F83E0C /* FancyField.swift in Sources */,
 				DA5F88E71F66E71800F83E0C /* SignInVC.swift in Sources */,
 				DA5F88E51F66E71800F83E0C /* AppDelegate.swift in Sources */,
+				DA5F88FC1F6844F200F83E0C /* FancyView.swift in Sources */,
+				DA5F89041F68498A00F83E0C /* RoundedBTN.swift in Sources */,
+				DA5F88FE1F6845FF00F83E0C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
