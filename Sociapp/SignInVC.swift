@@ -10,20 +10,22 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
+
 class SignInVC: UIViewController {
     @IBOutlet weak var emailTxt: FancyField!
     @IBOutlet weak var pwdTxt: FancyField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "toSecVC", sender: nil)
+        }
     }
-
     @IBAction func facebookBtnTapped(_ sender: UIButton) {
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self, handler: {(result, error) in
@@ -56,6 +58,9 @@ class SignInVC: UIViewController {
             }
             else{
                 print("successfuly auth")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
         
         })
@@ -66,7 +71,9 @@ class SignInVC: UIViewController {
             if error == nil
             {
              print("user Auth complete")
-                
+                if let user = user {
+             self.completeSignIn(id: user.uid)
+                }
              }
             else {
                 Auth.auth().createUser(withEmail: email, password: pwd, completion: {(user,error) in
@@ -76,6 +83,9 @@ class SignInVC: UIViewController {
                     }
                     else {
                         print("user created")
+                        if let user = user {
+                        self.completeSignIn(id: user.uid)
+                        }
                     }
                 
                 })
@@ -85,5 +95,10 @@ class SignInVC: UIViewController {
         }
         
     }
-
+    func completeSignIn(id:String){
+      KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Data Saved to keychain")
+        performSegue(withIdentifier: "toSecVC", sender: nil)
+        
+    }
 }

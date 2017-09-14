@@ -12,5 +12,5 @@ target 'Sociapp' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'FBSDKLoginKit'
-
+  pod 'SwiftKeychainWrapper', '~> 3.0'
 end

@@ -19,6 +19,8 @@
 		DA5F89041F68498A00F83E0C /* RoundedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89031F68498A00F83E0C /* RoundedBTN.swift */; };
 		DA5F89061F69645900F83E0C /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89051F69645900F83E0C /* FancyField.swift */; };
 		DA5F89081F69664600F83E0C /* fancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89071F69664600F83E0C /* fancyBtn.swift */; };
+		DA5F890B1F6AC17D00F83E0C /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F890A1F6AC17D00F83E0C /* FeedVC.swift */; };
+		DA5F890F1F6AD06D00F83E0C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F890E1F6AD06D00F83E0C /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		DA5F89031F68498A00F83E0C /* RoundedBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBTN.swift; sourceTree = "<group>"; };
 		DA5F89051F69645900F83E0C /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		DA5F89071F69664600F83E0C /* fancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyBtn.swift; sourceTree = "<group>"; };
+		DA5F890A1F6AC17D00F83E0C /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		DA5F890E1F6AD06D00F83E0C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DDA1378048142C625BB43D42 /* Pods-Sociapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sociapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sociapp/Pods-Sociapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,7 @@
 		DA5F88E31F66E71800F83E0C /* Sociapp */ = {
 			isa = PBXGroup;
 			children = (
+				DA5F89091F6ABF6C00F83E0C /* Util */,
 				DA5F88FA1F66E9A800F83E0C /* Controller */,
 				DA5F88F91F66E9A100F83E0C /* Views */,
 				DA5F88F81F66E99400F83E0C /* Model */,
@@ -114,10 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				DA5F88FB1F6844F200F83E0C /* FancyView.swift */,
-				DA5F88FD1F6845FF00F83E0C /* Constants.swift */,
 				DA5F89031F68498A00F83E0C /* RoundedBTN.swift */,
 				DA5F89051F69645900F83E0C /* FancyField.swift */,
 				DA5F89071F69664600F83E0C /* fancyBtn.swift */,
+				DA5F890E1F6AD06D00F83E0C /* CircleView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -126,8 +131,17 @@
 			isa = PBXGroup;
 			children = (
 				DA5F88E61F66E71800F83E0C /* SignInVC.swift */,
+				DA5F890A1F6AC17D00F83E0C /* FeedVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		DA5F89091F6ABF6C00F83E0C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F88FD1F6845FF00F83E0C /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +228,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -224,6 +239,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -272,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5F890F1F6AD06D00F83E0C /* CircleView.swift in Sources */,
 				DA5F89081F69664600F83E0C /* fancyBtn.swift in Sources */,
 				DA5F89061F69645900F83E0C /* FancyField.swift in Sources */,
 				DA5F88E71F66E71800F83E0C /* SignInVC.swift in Sources */,
 				DA5F88E51F66E71800F83E0C /* AppDelegate.swift in Sources */,
+				DA5F890B1F6AC17D00F83E0C /* FeedVC.swift in Sources */,
 				DA5F88FC1F6844F200F83E0C /* FancyView.swift in Sources */,
 				DA5F89041F68498A00F83E0C /* RoundedBTN.swift in Sources */,
 				DA5F88FE1F6845FF00F83E0C /* Constants.swift in Sources */,
