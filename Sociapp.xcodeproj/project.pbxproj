@@ -23,6 +23,7 @@
 		DA5F890F1F6AD06D00F83E0C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F890E1F6AD06D00F83E0C /* CircleView.swift */; };
 		DA5F89111F6D2FC500F83E0C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89101F6D2FC500F83E0C /* PostCell.swift */; };
 		DA5F89131F6D483D00F83E0C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89121F6D483D00F83E0C /* DataService.swift */; };
+		DA5F89161F6D570000F83E0C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89151F6D570000F83E0C /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		DA5F890E1F6AD06D00F83E0C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DA5F89101F6D2FC500F83E0C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		DA5F89121F6D483D00F83E0C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		DA5F89151F6D570000F83E0C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DDA1378048142C625BB43D42 /* Pods-Sociapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sociapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sociapp/Pods-Sociapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 		DA5F88F81F66E99400F83E0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA5F89151F6D570000F83E0C /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				DA5F890F1F6AD06D00F83E0C /* CircleView.swift in Sources */,
 				DA5F89081F69664600F83E0C /* fancyBtn.swift in Sources */,
 				DA5F89061F69645900F83E0C /* FancyField.swift in Sources */,
+				DA5F89161F6D570000F83E0C /* Post.swift in Sources */,
 				DA5F88E71F66E71800F83E0C /* SignInVC.swift in Sources */,
 				DA5F88E51F66E71800F83E0C /* AppDelegate.swift in Sources */,
 				DA5F89131F6D483D00F83E0C /* DataService.swift in Sources */,
