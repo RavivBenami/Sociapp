@@ -41,6 +41,7 @@ class SignInVC: UIViewController {
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
                 
+                
             }
             
             
@@ -59,7 +60,8 @@ class SignInVC: UIViewController {
             else{
                 print("successfuly auth")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider":credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         
@@ -72,7 +74,8 @@ class SignInVC: UIViewController {
             {
              print("user Auth complete")
                 if let user = user {
-             self.completeSignIn(id: user.uid)
+                    let userData = ["provider":user.providerID]
+             self.completeSignIn(id: user.uid, userData: userData)
                 }
              }
             else {
@@ -84,7 +87,8 @@ class SignInVC: UIViewController {
                     else {
                         print("user created")
                         if let user = user {
-                        self.completeSignIn(id: user.uid)
+                            let userData = ["Provider":user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                         }
                     }
                 
@@ -95,7 +99,8 @@ class SignInVC: UIViewController {
         }
         
     }
-    func completeSignIn(id:String){
+    func completeSignIn(id:String,userData: Dictionary<String,String>){
+        DataService.ds.createFirbaseUser(uid: id, userData: userData)
       KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Data Saved to keychain")
         performSegue(withIdentifier: "toSecVC", sender: nil)

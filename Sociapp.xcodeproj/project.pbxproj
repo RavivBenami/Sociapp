@@ -21,6 +21,8 @@
 		DA5F89081F69664600F83E0C /* fancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89071F69664600F83E0C /* fancyBtn.swift */; };
 		DA5F890B1F6AC17D00F83E0C /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F890A1F6AC17D00F83E0C /* FeedVC.swift */; };
 		DA5F890F1F6AD06D00F83E0C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F890E1F6AD06D00F83E0C /* CircleView.swift */; };
+		DA5F89111F6D2FC500F83E0C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89101F6D2FC500F83E0C /* PostCell.swift */; };
+		DA5F89131F6D483D00F83E0C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F89121F6D483D00F83E0C /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		DA5F89071F69664600F83E0C /* fancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyBtn.swift; sourceTree = "<group>"; };
 		DA5F890A1F6AC17D00F83E0C /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		DA5F890E1F6AD06D00F83E0C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		DA5F89101F6D2FC500F83E0C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		DA5F89121F6D483D00F83E0C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DDA1378048142C625BB43D42 /* Pods-Sociapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sociapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sociapp/Pods-Sociapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,7 @@
 		DA5F88E31F66E71800F83E0C /* Sociapp */ = {
 			isa = PBXGroup;
 			children = (
+				DA5F89141F6D486B00F83E0C /* Services */,
 				DA5F89091F6ABF6C00F83E0C /* Util */,
 				DA5F88FA1F66E9A800F83E0C /* Controller */,
 				DA5F88F91F66E9A100F83E0C /* Views */,
@@ -123,6 +128,7 @@
 				DA5F89051F69645900F83E0C /* FancyField.swift */,
 				DA5F89071F69664600F83E0C /* fancyBtn.swift */,
 				DA5F890E1F6AD06D00F83E0C /* CircleView.swift */,
+				DA5F89101F6D2FC500F83E0C /* PostCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -142,6 +148,14 @@
 				DA5F88FD1F6845FF00F83E0C /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		DA5F89141F6D486B00F83E0C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F89121F6D483D00F83E0C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +307,12 @@
 				DA5F89061F69645900F83E0C /* FancyField.swift in Sources */,
 				DA5F88E71F66E71800F83E0C /* SignInVC.swift in Sources */,
 				DA5F88E51F66E71800F83E0C /* AppDelegate.swift in Sources */,
+				DA5F89131F6D483D00F83E0C /* DataService.swift in Sources */,
 				DA5F890B1F6AC17D00F83E0C /* FeedVC.swift in Sources */,
 				DA5F88FC1F6844F200F83E0C /* FancyView.swift in Sources */,
 				DA5F89041F68498A00F83E0C /* RoundedBTN.swift in Sources */,
 				DA5F88FE1F6845FF00F83E0C /* Constants.swift in Sources */,
+				DA5F89111F6D2FC500F83E0C /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
